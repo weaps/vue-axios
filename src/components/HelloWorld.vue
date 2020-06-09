@@ -34,11 +34,15 @@
 </template>
 
 <script lang="ts">
+import Http from '@/api/index'
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+  mounted() {
+    console.log(Http)
+  }
 }
 </script>
 
